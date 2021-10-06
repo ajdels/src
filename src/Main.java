@@ -1,3 +1,5 @@
+import comp.comp152.WeekDay;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -14,5 +16,7 @@ public class Main {
         doc.treatPatient(sickPerson1);
         doc.treatPatient(sickPerson2);
         System.out.println(doc);
+        WeekDay appointmentDay = WeekDay.Monday;
+        WeekDay badDay = WeekDay.Monday
     }
 }

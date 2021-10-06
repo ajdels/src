@@ -1,3 +1,5 @@
+import javax.print.Doc;
+
 public class Doctor {
     protected String AlmaMater;
     private double fee;
@@ -24,7 +26,17 @@ public class Doctor {
         return fee;
     }
     @Override
-    public String toString(){
-        return "Doctor: \nMed School:"+ AlmaMater+"\nFee:"+fee;
+    public String toString() {
+        return "Doctor: \nMed School:" + AlmaMater + "\nFee:" + fee;
+    }
+    @Override
+    public boolean equals(Object other){
+        if (!(other instanceof Doctor)){
+            return false;
+        }
+        Doctor otherDoctor = (Doctor) other;
+        var isSame = this.fee == otherDoctor.fee && this.AlmaMater.equals(otherDoctor.AlmaMater);
+        return isSame;
+        }
     }
 }
